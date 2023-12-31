@@ -30,12 +30,14 @@ export class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.contacts !== this.state.contacts) {
-      localStorage.setItem(localStorageKey, JSON.stringify(this.state.contacts));
+    const { contacts } = this.state;
+
+    if (prevState.contacts !== contacts) {
+      localStorage.setItem(localStorageKey, JSON.stringify(contacts));
     }
   };
 
-  onAdd = (newContact) => {
+  onAdd = newContact => {
     if (this.state.contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
       return alert(`${newContact.name} is already in contacts.`);
     };

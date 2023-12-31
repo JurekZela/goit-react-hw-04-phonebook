@@ -52,6 +52,7 @@ p {
   padding: 0;
   list-style: none;
   }
+  
   #root {
 display: flex;
 justify-content: center;
