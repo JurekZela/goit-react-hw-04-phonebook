@@ -25,7 +25,7 @@ export const ContactForm = ({ onAdd }) => {
     validationSchema={SignupSchema}
     onSubmit={async (values, actions) => {
       await new Promise((r) => setTimeout(r, 500));
-      onAdd({ ...values, id: nanoid() });
+      onAdd({ id: nanoid(), ...values });
       actions.resetForm();
     }}
   >
