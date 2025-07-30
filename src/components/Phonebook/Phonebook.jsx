@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid'
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { Button, StyledForm as Form, StyledField as Field, StyledLabel as Label, ErrorMsg, } from './Phonebook-styled';
+import { Button, StyledForm as Form, StyledField as Field, StyledLabel as Label, ErrorMsg, } from './PhoneBook-styled';
 
 const SignupSchema = Yup.object().shape({
     name: Yup.string()
