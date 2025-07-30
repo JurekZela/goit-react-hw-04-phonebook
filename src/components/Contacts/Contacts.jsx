@@ -1,6 +1,6 @@
 import { ListContact, RemoveButton } from './Contacts-styled';
 
-export const ContactList = ({ list, removeContact }) => {
+export default function ContactList ({ list, removeContact }) {
   return (
     <ul>
       {list.map(({ id, name, number }) => {

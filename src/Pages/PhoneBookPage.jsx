@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
-import { ContactForm } from 'components/PhoneBook/PhoneBook';
-import { Title, Card } from '../components/Contacts/Contacts-styled';
-import { ContactList } from '../components/Contacts/Contacts';
+
+import ContactForm from 'components/PhoneBook/PhoneBook';
+import ContactList from '../components/Contacts/Contacts';
 import { Filter } from '../components/Filter/Filter';
+
+import { Title, Card } from '../components/Contacts/Contacts-styled';
 
 const localStorageKey = 'contacts';
 
-export default function PhoneBookPage () {
-
-      const [contacts, setContacts] = useState(
+export default function PhoneBookPage() {
+  const [contacts, setContacts] = useState(
     () =>
       JSON.parse(localStorage.getItem(localStorageKey)) ?? [
         { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -43,12 +44,12 @@ export default function PhoneBookPage () {
     name.toLowerCase().includes(filter.toLocaleLowerCase())
   );
 
-    return (
-            <Card>
+  return (
+    <Card>
       <ContactForm onAdd={onAdd} />
       <Title>Contacts</Title>
       <Filter filter={filter} onSearchContact={searchContact} />
       <ContactList list={visibleContacts} removeContact={removeContact} />
     </Card>
-    );
-};
+  );
+}

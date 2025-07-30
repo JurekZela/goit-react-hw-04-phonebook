@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import { App } from 'components/App/App.jsx';
 import { GlobalStyled } from './GlobalStyled.js';
 import { BrowserRouter } from 'react-router-dom';
 

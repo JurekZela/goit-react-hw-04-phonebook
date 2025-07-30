@@ -14,7 +14,7 @@ const SignupSchema = Yup.object().shape({
   });
   
 
-export const ContactForm = ({ onAdd }) => {
+export default function ContactForm ({ onAdd }) {
   return (
     <Formik
     initialValues={{
