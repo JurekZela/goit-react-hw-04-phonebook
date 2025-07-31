@@ -1,6 +1,6 @@
 import { Input } from './Filter-styled';
 
-export const Filter = ({ filter, onSearchContact }) => {
+export default function Filter ({ filter, onSearchContact }) {
     return (
         <div>
         <p>Find contacts by name</p>

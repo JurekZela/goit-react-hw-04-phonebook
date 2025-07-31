@@ -26,6 +26,7 @@ export default function ContactForm({ onAdd }) {
           number: '',
           contacts: [],
         }}
+        
         validationSchema={SignupSchema}
         onSubmit={async function (values, actions) {
           await new Promise(r => setTimeout(r, 500));

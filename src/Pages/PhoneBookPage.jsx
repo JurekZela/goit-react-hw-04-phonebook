@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import ContactForm from '../components/PhoneBook/PhoneBook.jsx';
 import ContactList from '../components/Contacts/Contacts';
-import { Filter } from '../components/Filter/Filter';
+import Filter from '../components/Filter/Filter';
 
 import { Title, Card } from '../components/Contacts/Contacts-styled';
 
