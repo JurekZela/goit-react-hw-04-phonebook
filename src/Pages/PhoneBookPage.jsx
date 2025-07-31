@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import ContactForm from 'components/PhoneBook/PhoneBook';
+import ContactForm from '../components/PhoneBook/PhoneBook';
 import ContactList from '../components/Contacts/Contacts';
 import { Filter } from '../components/Filter/Filter';
 
