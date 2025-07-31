@@ -23,7 +23,7 @@ export default function ContactForm ({ onAdd }) {
       contacts: [],
     }}
     validationSchema={SignupSchema}
-    onSubmit={async (values, actions) => {
+    onSubmit={async function (values, actions) {
       await new Promise((r) => setTimeout(r, 500));
       onAdd({ id: nanoid(), ...values });
       actions.resetForm();
